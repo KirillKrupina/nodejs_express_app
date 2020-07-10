@@ -15,7 +15,10 @@ app.engine('hbs', hbs.engine);
 
 // setting value(hbs) to name(view engine) 
 app.set('view engine', 'hbs');
-app.set('views', 'views')
+app.set('views', 'views');
+
+// providing static files
+app.use(express.static('public'));
 
 
 app.get('/', (req, res) => {
