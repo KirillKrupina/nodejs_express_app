@@ -23,6 +23,10 @@ app.set('views', 'views');
 // providing static files
 app.use(express.static('public'));
 
+app.use(express.urlencoded({
+    extended: true
+}));
+
 //routes
 // TODO: need to replace to another file
 app.use('/', homeRoutes);
